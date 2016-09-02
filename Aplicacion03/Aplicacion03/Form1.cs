@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Aplicacion03
 {
-    public partial class Form1 : Form
+    public partial class    Form1 : Form
     {
         public Form1()
         {
@@ -27,6 +27,7 @@ namespace Aplicacion03
         private void button1_Click(object sender, EventArgs e)
         {
             string cadena = this.txtCadena.Text;
+            string OrdenAlfa = "";
 
             for (int i = cadena.Length -1; i >= 0; i--)
             {
@@ -40,6 +41,13 @@ namespace Aplicacion03
             {
                 this.txtAlfa.Text += Ordena[i].ToString();
             }
+
+            /*foreach (char item in Ordena)
+            {
+                OrdenAlfa += item;
+            }
+
+            this.txtAlfa.Text = OrdenAlfa;*/
         }
 
         private void button3_Click(object sender, EventArgs e)
