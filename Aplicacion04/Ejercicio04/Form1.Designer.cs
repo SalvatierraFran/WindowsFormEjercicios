@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbtnAsc = new System.Windows.Forms.RadioButton();
-            this.rbtnDesc = new System.Windows.Forms.RadioButton();
             this.btnOrdenar = new System.Windows.Forms.Button();
+            this.rbtnDesc = new System.Windows.Forms.RadioButton();
+            this.rbtnAsc = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listNum = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,13 +54,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar un nuevo número";
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(20, 30);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
-            this.txtNumero.TabIndex = 0;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(153, 27);
@@ -68,6 +62,14 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(20, 30);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -81,28 +83,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Orden";
             // 
-            // rbtnAsc
-            // 
-            this.rbtnAsc.AutoSize = true;
-            this.rbtnAsc.Location = new System.Drawing.Point(20, 46);
-            this.rbtnAsc.Name = "rbtnAsc";
-            this.rbtnAsc.Size = new System.Drawing.Size(82, 17);
-            this.rbtnAsc.TabIndex = 0;
-            this.rbtnAsc.TabStop = true;
-            this.rbtnAsc.Text = "Ascendente";
-            this.rbtnAsc.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDesc
-            // 
-            this.rbtnDesc.AutoSize = true;
-            this.rbtnDesc.Location = new System.Drawing.Point(20, 80);
-            this.rbtnDesc.Name = "rbtnDesc";
-            this.rbtnDesc.Size = new System.Drawing.Size(89, 17);
-            this.rbtnDesc.TabIndex = 1;
-            this.rbtnDesc.TabStop = true;
-            this.rbtnDesc.Text = "Descendente";
-            this.rbtnDesc.UseVisualStyleBackColor = true;
-            // 
             // btnOrdenar
             // 
             this.btnOrdenar.Location = new System.Drawing.Point(153, 59);
@@ -111,6 +91,29 @@
             this.btnOrdenar.TabIndex = 2;
             this.btnOrdenar.Text = "Ordenar";
             this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
+            // rbtnDesc
+            // 
+            this.rbtnDesc.AutoSize = true;
+            this.rbtnDesc.Location = new System.Drawing.Point(20, 80);
+            this.rbtnDesc.Name = "rbtnDesc";
+            this.rbtnDesc.Size = new System.Drawing.Size(89, 17);
+            this.rbtnDesc.TabIndex = 1;
+            this.rbtnDesc.Text = "Descendente";
+            this.rbtnDesc.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAsc
+            // 
+            this.rbtnAsc.AutoSize = true;
+            this.rbtnAsc.Checked = true;
+            this.rbtnAsc.Location = new System.Drawing.Point(20, 46);
+            this.rbtnAsc.Name = "rbtnAsc";
+            this.rbtnAsc.Size = new System.Drawing.Size(82, 17);
+            this.rbtnAsc.TabIndex = 0;
+            this.rbtnAsc.TabStop = true;
+            this.rbtnAsc.Text = "Ascendente";
+            this.rbtnAsc.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -130,11 +133,22 @@
             this.listNum.Size = new System.Drawing.Size(189, 186);
             this.listNum.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Image = global::Ejercicio04.Properties.Resources.Puerta2;
+            this.button1.Location = new System.Drawing.Point(521, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 153);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 303);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -160,6 +174,7 @@
         private System.Windows.Forms.RadioButton rbtnAsc;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox listNum;
+        private System.Windows.Forms.Button button1;
     }
 }
 
